@@ -23,7 +23,7 @@ Benin,Benin,BEN,12678649,Africa,26952,163,2126,13,0.604778866
 Bermuda,Bermuda,BMU,61875,Northern America,12564,128,203055,2069,1.018783827
 Bhutan,Bhutan,BTN,786480,Asia,31437,12,39972,15,0.038171581
 Bolivia,Bolivia (Plurinational State of),BOL,11951714,Latin America and the Caribbean,902448,21896,75508,1832,2.426289382
-Bosnia and Herzegovina,Bosnia and Herzegovina,BIH,3245097,Europe,375693,15719,115773,4844,4.184001299
+Bosnia and Herz.,Bosnia and Herzegovina,BIH,3245097,Europe,375693,15719,115773,4844,4.184001299
 Botswana,Botswana,BWA,2434708,Africa,305526,2686,125488,1103,0.879139582
 Brazil,Brazil,BRA,215204501,Latin America and the Caribbean,29999816,660269,139401,3068,2.200910166
 British Virgin Islands,British Virgin Islands,VGB,30583,Latin America and the Caribbean,6155,62,201256,2027,1.007311129
@@ -35,7 +35,7 @@ Cabo Verde,Cabo Verde,CPV,566557,Africa,55960,401,98772,708,0.716583274
 Cambodia,Cambodia,KHM,17123941,Asia,135747,3054,7927,178,2.249773476
 Cameroon,Cameroon,CMR,27701805,Africa,119544,1927,4315,70,1.611958777
 Canada,Canada,CAN,38321435,Northern America,3499226,37690,91312,984,1.077095335
-CAR,Central African Republic,CAF,4976719,Africa,14649,113,2944,23,0.771383712
+Central African Rep.,Central African Republic,CAF,4976719,Africa,14649,113,2944,23,0.771383712
 Caribbean Netherlands,"Bonaire, Sint Eustatius and Saba",BES,26650,Latin America and the Caribbean,8574,33,321726,1238,0.384884535
 Cayman Islands,Cayman Islands,CYM,67073,Latin America and the Caribbean,20606,24,307218,358,0.116470931
 Chad,Chad,TCD,17250246,Africa,7308,191,424,11,2.613574165
@@ -55,7 +55,7 @@ Czechia,Czech Republic,CZE,10743762,Europe,3830631,39720,356545,3697,1.036904886
 Denmark,Denmark,DNK,5827911,Europe,2919428,5762,500939,989,0.19736743
 Djibouti,Djibouti,DJI,1013146,Africa,15590,189,15388,187,1.212315587
 Dominica,Dominica,DMA,72299,Latin America and the Caribbean,11891,63,164470,871,0.529812463
-Dominican Republic,Dominican Republic,DOM,11038333,Latin America and the Caribbean,578130,4375,52375,396,0.756750212
+Dominican Rep.,Dominican Republic,DOM,11038333,Latin America and the Caribbean,578130,4375,52375,396,0.756750212
 Dem. Rep. Congo,Democratic Republic of the Congo,COD,94323344,Africa,86748,1337,920,14,1.541245908
 Ecuador,Ecuador,ECU,18111933,Latin America and the Caribbean,859890,35421,47476,1956,4.119247811
 Egypt,Egypt,EGY,105711844,Africa,505264,24417,4780,231,4.832523196
@@ -208,7 +208,7 @@ Trinidad and Tobago,Trinidad and Tobago,TTO,1407422,Latin America and the Caribb
 Tunisia,Tunisia,TUN,12035092,Africa,1035884,28323,86072,2353,2.734186453
 Turkey,Turkey,TUR,85927644,Asia,14894731,98157,173340,1142,0.659004852
 Turks and Caicos,Turks and Caicos Islands,TCAÂ ,39634,Latin America and the Caribbean,5910,36,149114,908,0.609137056
-UAE,United Arab Emirates,ARE,10099567,Asia,892170,2302,88337,228,0.258022574
+United Arab Emirates,United Arab Emirates,ARE,10099567,Asia,892170,2302,88337,228,0.258022574
 Uganda,Uganda,UGA,48267221,Africa,163936,3595,3396,74,2.192928948
 United Kingdom,United Kingdom of Great Britain and Northern Ireland,GBR,68510300,Europe,21216874,165570,309689,2417,0.780369436
 Ukraine,Ukraine,UKR,43273831,Europe,4968881,107980,114824,2495,2.173125096
