@@ -1,0 +1,53 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 800,
+  "height": 450,
+  "title": "Total Number of Covid-19 Cases Worldwide",
+  "projection": {"type": "equalEarth"},
+  "data": {
+    "url": "https://raw.githubusercontent.com/benansel/FIT3179-A2/main/js/ne_110m.json",
+    "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
+  },
+  "layer": [
+    {
+      "transform": [
+        {
+          "calculate": "'Total Cases in ' + datum.properties.NAME + ' were not recorded'",
+          "as": "note"
+        }
+      ],
+      "mark": {"type": "geoshape", "fill": "lightgray", "stroke": "white"},
+      "encoding": {"tooltip": {"field": "note"}}
+    },
+    {
+      "transform": [
+        {
+          "lookup": "properties.NAME",
+          "from": {
+            "data": {
+              "url": "https://raw.githubusercontent.com/benansel/FIT3179-A2/main/Data/COVID-19%20Coronavirus.csv"
+            },
+            "key": "Country",
+            "fields": ["Total Cases"]
+          }
+        }
+      ],
+      "mark": {"type": "geoshape", "stroke": "white"},
+      "encoding": {
+        "color": {
+          "field": "Total Cases",
+          "type": "quantitative",
+          "scale": {
+            "type": "log",
+            "range": ["#D2E1E6", "C1E3Ed", "#AAC9DD", "#78AED3", "#4F77AA"]
+          }
+        },
+        "tooltip": [
+          {"field": "properties.NAME", "type": "nominal", "title": "Country"},
+          {"field": "Total Cases", "type": "quantitative"}
+        ]
+      }
+    }
+  ],
+  "config": {}
+}
