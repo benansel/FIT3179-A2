@@ -1,0 +1,22 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 800,
+  "height": 450,
+  "title": "Total Number of Covid-19 Cases by Continent",
+  "data": {
+    "values": [
+      {"category": "Africa", "value": 11764207},
+      {"category": "Asia", "value": 140957179},
+      {"category": "Europe", "value": 180332483},
+      {"category": "Latin America and the Caribbean", "value": 67509231},
+      {"category": "Northern America", "value": 85364770},
+      {"category": "Oceania", "value": 5647957}
+    ]
+  },
+  "mark": "arc",
+  "encoding": {
+    "theta": {"field": "value", "type": "quantitative"},
+    "color": {"field": "category", "type": "nominal"}
+  },
+  "config": {}
+}
