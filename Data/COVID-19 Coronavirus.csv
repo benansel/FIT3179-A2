@@ -56,7 +56,7 @@ Denmark,Denmark,DNK,5827911,Europe,2919428,5762,500939,989,0.19736743
 Djibouti,Djibouti,DJI,1013146,Africa,15590,189,15388,187,1.212315587
 Dominica,Dominica,DMA,72299,Latin America and the Caribbean,11891,63,164470,871,0.529812463
 Dominican Republic,Dominican Republic,DOM,11038333,Latin America and the Caribbean,578130,4375,52375,396,0.756750212
-Democratic Republic of the Congo,Democratic Republic of the Congo,COD,94323344,Africa,86748,1337,920,14,1.541245908
+Dem. Rep. Congo,Democratic Republic of the Congo,COD,94323344,Africa,86748,1337,920,14,1.541245908
 Ecuador,Ecuador,ECU,18111933,Latin America and the Caribbean,859890,35421,47476,1956,4.119247811
 Egypt,Egypt,EGY,105711844,Africa,505264,24417,4780,231,4.832523196
 El Salvador,El Salvador,SLV,6543499,Latin America and the Caribbean,161570,4120,24692,630,2.549978338
@@ -166,7 +166,7 @@ Réunion,RÃ©union,REU,906497,Africa,336945,709,371700,782,0.210420098
 Romania,Romania,ROU,19013049,Europe,2860094,65090,150428,3423,2.275799327
 Russia,Russian Federation,RUS,146044010,Europe,17896866,369708,122544,2531,2.065769504
 Rwanda,Rwanda,RWA,13513881,Africa,129728,1458,9600,108,1.123889985
-S. Korea,Republic of Korea,KOR,51346429,Asia,13874216,17235,270208,336,0.124223235
+South Korea,Republic of Korea,KOR,51346429,Asia,13874216,17235,270208,336,0.124223235
 Saint Helena,Saint Helena,SHN,6109,Africa,2,0,327,0,0
 Saint Kitts and Nevis,Saint Kitts and Nevis,KNA,53858,Latin America and the Caribbean,5549,43,103030,798,0.774914399
 Saint Lucia,Saint Lucia,LCA,185096,Latin America and the Caribbean,22964,365,124065,1972,1.589444348
@@ -210,7 +210,7 @@ Turkey,Turkey,TUR,85927644,Asia,14894731,98157,173340,1142,0.659004852
 Turks and Caicos,Turks and Caicos Islands,TCAÂ ,39634,Latin America and the Caribbean,5910,36,149114,908,0.609137056
 UAE,United Arab Emirates,ARE,10099567,Asia,892170,2302,88337,228,0.258022574
 Uganda,Uganda,UGA,48267221,Africa,163936,3595,3396,74,2.192928948
-UK,United Kingdom of Great Britain and Northern Ireland,GBR,68510300,Europe,21216874,165570,309689,2417,0.780369436
+United Kingdom,United Kingdom of Great Britain and Northern Ireland,GBR,68510300,Europe,21216874,165570,309689,2417,0.780369436
 Ukraine,Ukraine,UKR,43273831,Europe,4968881,107980,114824,2495,2.173125096
 Uruguay,Uruguay,URY,3494806,Latin America and the Caribbean,889513,7166,254524,2050,0.805609362
 United States of America,United States of America,USA,334400597,Northern America,81839052,1008222,244734,3015,1.231957086
