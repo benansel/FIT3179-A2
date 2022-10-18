@@ -1,44 +1,242 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
-  <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
-  <style>
-  .header {
-    padding: 20px;
-    text-align: center;
-    background: #ffffff;
-    color: black;
-    font-size: 20px;}
-    </style>
+    <head>
 
-  
-  <!-- CSS file -->
-  <link rel="stylesheet" type="text/css" href="https://raw.githubusercontent.com/benansel/FIT3179-A2/main/CSS/styles.css" media="all">
-</head>
-<div class="header">
-    <h1>Covid-19 Cases Worldwide</h1>
-  </div>
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
 
-<body>
-  
-<div id="symbol_map"></div>
-  
-<div id="symbol_map2"></div>
+        <link rel="stylesheet" type="text/css" href="styles.css" media="all">
 
-<script type="text/javascript">
+        <!-- Import pure.css -->
+        <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Imported Font -->
+        
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&family=Roboto&display=swap", rel="stylesheet">
+        
+        <style>
+            *{
+                font-family: 'Roboto', sans-serif;
+            }
+            h1{
+              font-weight: 700;
+              font-size: 50px;
+            }
+             body{
+               background-color: "#AEC6CF";
+               vertical-align: middle;
+             }
+             .page{
+               width: 1700px;    
+               background-color: honeydew;   
+               margin: auto;
+               padding: 50px;
+               padding-top: 35px;
+               font-size: 20px;
+            }
+            .vis-container{
+              width: 100%;
+            }
+            .description h2, h1{
+              margin-top:0px;
+            }
+            .description-right {
+              padding-left: 20px;
+            }
+            .description-left{
+              padding-right: 20px;
+            }
+            .description-center{
+              padding-center: 20px;
+            }
+            .pure-g{
+              margin-bottom: 25px;
+              text-align: center;
+            }
+            .small-font{
+                font-size: 14px;
+            }
+        </style>
 
-  var spec1 = "https://raw.githubusercontent.com/benansel/FIT3179-A2/main/js/visualization.vl.json";
-  var spec2 = "https://raw.githubusercontent.com/benansel/FIT3179-A2/main/js/visualization.vl%20(1).json";
-  vegaEmbed('#symbol_map', spec1).then(function(result) {
-    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-  }).catch(console.error);
-  vegaEmbed('#symbol_map2', spec2).then(function(result) {
-    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-  }).catch(console.error);
-</script>
+    </head>
+    <body>
 
-</body>
+        <div class="page">
+
+            <!-- start of grid group -->
+            <div class="pure-g">
+                <div class="pure-u-1-1">
+                    <h1>The Fight Against Covid-19</h1>
+                </div>
+            </div>
+            <!-- end of grid group -->
+
+            <!-- start of grid group -->
+            <div class="pure-g">
+                <div class="pure-u-1-1">
+                    <div class="description description-center">
+                        <h2>What is COVID-19 and how are we fighting back against it ?</h2>
+                        <p>The <b>COVID-19</b> is an ongoing pandemic which has caused chaos and panic all around the world. It has been <b>two years</b> since the pandemic began back in <b>2020</b> and people are still struggling to go back to pre covid lives. However we are fighting a successful battle against <b>COVID-19</b> through pre-cautionary measures such as masks and social-distancing as well as <b>extensive testing for COVID</b> and <b>Vaccinations</b>. In this visualization we will be taking a look at how the fight has gone so far </p>
+                    </div>
+                </div>
+            </div>
+            <!-- end of grid group -->
+
+            <!-- start of grid group -->
+            <div class="pure-g">
+                <div class="pure-u-1-1">
+                    <div id="viz1" class="vis-container"></div>
+                </div>
+            </div>
+            <!-- end of grid group -->
+
+             <!-- start of grid group -->
+             <div class="pure-g">
+                <div class="pure-u-1-2">
+                    <div id="description-center"></div>
+                    <h2>Which countries have the most vaccinations ?</h2>
+                    <p>Here we will take a look at the <b>top 10</b> countries with the highest number of vaccinations</p>
+                </div>
+
+                <div class="pure-u-1-2">
+                    <div id="description-center"></div>
+                    <h2>Composition of Fully vaccinated and partially vaccinated people</h2>
+                    <p>Here we will take a look at the vaccination progress of <b>each country</b> and how is the split between <b>fully vaccinated</b> and <b>partially vaccinated</b> people</p>
+                </div>
+            </div>
+            <!-- end of grid group -->
+
+            <!-- start of grid group -->
+              <div class="pure-g">
+                <div class="pure-u-1-2">
+                    <div id="viz2" class="vis-container"></div>
+                </div>
+
+                <div class="pure-u-1-2">
+                    <div id="viz3" class="vis-container"></div>
+                </div>
+            </div>
+            <!-- end of grid group -->
+            
+            <!-- start of grid group -->
+            <div class="pure-g">
+                <div class="pure-u-1-1">
+                    <div class="description description-center">
+                        <h2>How are <b>G7 countries </b>managing the vaccine rollout ?</h2>
+                        <p>In this section we will be looking into how sucessfully <b>G7 countries</b> have managed to vaccinate their people</p>
+                        <p>The <b>G7 countries are: </b> <span style="color:blue">Canada</span>, <span style="color:darkgray">France</span>, <span style="color:red">Germany</span>, <span style="color:brown">Italy</span>, <span style="color:green">Japan</span>, <span style="color:darkcyan">United Kingdom</span> and <span style="color:purple">United States of America</span></p>
+                        <br>
+                        <p>Please note that the second graph is <b>excluding <span style="color:green">Japan</span></b> due to inconsistent data</p>
+                    </div>
+                </div>
+            </div>
+            <!-- end of grid group -->
+
+            <!-- start of grid group -->
+            <div class="pure-g">
+                <div class="pure-u-1-2">
+                    <div id="viz4" class="vis-container"></div>
+                </div>
+
+                <div class="pure-u-1-2">
+                    <div id="viz5" class="vis-container"></div>
+                </div>
+            </div>
+            <!-- end of grid group -->
+
+            <!-- start of grid group -->
+            <div class="pure-g">
+                <div class="pure-u-1-1">
+                    <div class="description description-center">
+                        <h2><b>COVID-19</b> vs the <b>USA</b></h2> 
+                        <p>When the pandemic first broke out back in <b>2020</b>, the US was one of, if not, the worst hit country with hospitals overflowing with patients, riots and looting for grocery, essential supplies and much more. To date, the total number of deaths due to <b>COVID-19</b> in the US are around <b>1.06 million</b> which makes it the country with the <b>most deaths</b> due to <b>COVID-19</b> In the following visualization we will take a closer look at the casualties USA <b>suffered</b> and how it is <b>recovering</b> from this pandemic</p>
+                        <br>
+                        <p>The maps below show two <b>different</b> sides of the war against <b>COVID-19</b>. The maps show an in-depth look of how the USA suffered and the map on the left paints that exact picture. It can be observed that among the <b>50 states</b> <span style="color:red">California</span>, <span style="color:red">Texas</span>, <span style="color:red">Florida</span> and <span style="color:red">New York</span> suffered the most with over <b>70,000+ deaths</b>. While in the right map it can be seen that these 4 were the states with the <span style="color:green">most recoveries</span></p>
+                    </div>
+                </div>
+            </div>
+            <!-- end of grid group -->
+
+            <!-- start of grid group -->
+            <div class="pure-g">
+                <div class="pure-u-1-2">
+                    <div id="viz6" class="vis-container"></div>
+                </div>
+
+                <div class="pure-u-1-2">
+                    <div id="viz7" class="vis-container"></div>
+                </div>
+            </div>
+            <!-- end of grid group -->
+            
+            <!-- start of grid group -->
+            <div class="pure-g">
+                <div class="pure-u-1-2">
+                    <div id="description-center">
+                    <h2>Does the number of <b>COVID-19</b> tests conducted affect <b>Number of recoveries</b> ?</h2>
+                    <p>Here we will check if having greater number of tests directly relates to more recoveries</p>
+                    </div>
+                </div>
+
+                <div class="pure-u-1-2">
+                    <div id="description-center">
+                    <h2>How well did <b>each state</b> in the US perform when it came to vaccinating their people ?</h2>
+                    <p>The following visualization shows the number of people vaccinated each day over the year <b>2021</b> when the vaccines started to become available to the public</p>
+                    </div>
+                </div>
+            </div>
+            <!-- end of grid group -->
+
+            <div class="pure-g">
+                <div class="pure-u-1-2">
+                    <div id="viz8" class="vis-container"></div>
+                </div>
+
+                <div class="pure-u-1-2">
+                    <div id="viz9" class="vis-container"></div>
+                </div>
+            </div>
+
+            <div class="pure-g">
+                <div class="pure-u-1-1">
+                    <div id="description-center">
+                        <h2>Conclusion</h2>
+                        <p>In conclusion, the fight against <b>COVID-19</b> seems to be close to the end however we should still keep <b>pre-cautionary measures</b> such as <b>face masks</b> and <b>social-distancing</b> to ensure that another tragedy like the <b>COVID-19 War</b> in the <span style="color:purple">United States of America</span> does not repeat. Our main weapons as seen from the visualizations above are <span style="color: green">testing</span> and <span style="color: green">vaccinations</span> and soon we will be able to return to a <b><span style="font-size:24">MASK-FREE</span></b> World</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="pure-g">
+                <div class="pure-u-1-1">
+                    <div id="description-center">
+                        <p>&copy; 2022 Shariq Nadeem Malik <br> Copyright reserved</p>
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <script type="text/javascript">
+            var specVis1 = "js/visualization.vl.json.";
+            var specVis2 = "js/visualization(2).vl.json";
+            var specVis3 = "js/visualization(3).vl.json";
+                    
+            vegaEmbed('#viz1', specVis1, {"actions": false}).then(function(result) {
+              // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+            }).catch(console.error);
+
+            vegaEmbed('#viz2', specVis2, {"actions": false}).then(function(result) {
+              // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+            }).catch(console.error);
+
+            vegaEmbed('#viz3', specVis3, {"actions": false}).then(function(result) {
+              // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+            }).catch(console.error);
+            
+        </script>
+    </body>
 </html>
