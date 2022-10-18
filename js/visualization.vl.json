@@ -1,53 +1,61 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 800,
-  "height": 450,
-  "title": "Total Number of Covid-19 Cases Worldwide",
-  "projection": {"type": "equalEarth"},
-  "data": {
-    "url": "https://raw.githubusercontent.com/benansel/FIT3179-A2/main/js/ne_110m.json",
-    "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
+  "width": 1500,
+  "height": 600,
+  "title": {
+    "text": "Total Number of Covid-19 Cases Worldwide",
+    "fontSize": 20,
+    "dy": -15
   },
-  "layer": [
-    {
-      "transform": [
+  "projection": {"type": "equalEarth"},
+      "layer":[
         {
-          "calculate": "'Total Cases in ' + datum.properties.NAME + ' were not recorded'",
-          "as": "note"
-        }
-      ],
-      "mark": {"type": "geoshape", "fill": "lightgray", "stroke": "white"},
-      "encoding": {"tooltip": {"field": "note"}}
-    },
-    {
-      "transform": [
-        {
-          "lookup": "properties.NAME",
-          "from": {
             "data": {
-              "url": "https://raw.githubusercontent.com/benansel/FIT3179-A2/main/Data/COVID-19%20Coronavirus.csv"
-            },
-            "key": "Country",
-            "fields": ["Total Cases"]
-          }
-        }
-      ],
-      "mark": {"type": "geoshape", "stroke": "white"},
-      "encoding": {
-        "color": {
-          "field": "Total Cases",
-          "type": "quantitative",
-          "scale": {
-            "type": "log",
-            "range": ["#D2E1E6", "C1E3Ed", "#AAC9DD", "#78AED3", "#4F77AA"]
-          }
+                "url": "https://raw.githubusercontent.com/FIT3179/Vega-Lite/main/7_others/oceans.topojson",
+                "format": {"type": "topojson", "feature": "oceans"}
+              },
+              "mark": {"type": "geoshape", "fill": "skyblue"}
         },
-        "tooltip": [
-          {"field": "properties.NAME", "type": "nominal", "title": "Country"},
-          {"field": "Total Cases", "type": "quantitative"}
-        ]
+        {
+            "data":{
+                "url":"https://raw.githubusercontent.com/JiazhouLiu/FIT3179/main/VegaLite/3_choropleth_map/js/ne_110m_admin_0_countries.topojson",
+                "format":{"type": "topojson", "feature": "ne_110m_admin_0_countries"}
+            },
+            "mark":{"type": "geoshape", "fill": "lightgray", "stroke":"white"},
+            "transform": [
+        {"calculate": "'Data Not Recorded for  ' + datum.properties.NAME", "as": "MissedData"}
+      ],
+      "encoding": {"tooltip": {"field": "MissedData"}}
+        },
+        {
+            "data":{
+                "url":"https://raw.githubusercontent.com/shariqmalik10/Assignment2-Visualization-VegaLite/master/js/ne_110m_admin_0_countries.topojson",
+                "format":{"type": "topojson", "feature": "ne_110m_admin_0_countries"}
+            },
+            "transform": [
+            {
+                "lookup": "properties.NAME",
+                "from":{
+                    "data":{
+                        "url": "https://raw.githubusercontent.com/benansel/FIT3179-A2/main/Data/COVID-19%20Coronavirus.csv"
+                    },
+                    "key": "Country",
+                    "fields": ["Total Cases"]
+                }
+            }
+        ],
+        "mark": {"type": "geoshape", "stroke": "grey"},
+        "encoding": {
+            "color":{
+                "field": "Total Cases", 
+                "type": "quantitative",
+                "legend": {"offset":-130, "orient":"none", "legendY":0, "legendX":1400}
+            },
+            "tooltip": [
+            {"field": "properties.NAME", "type": "nominal", "title": "Country"},
+            {"field": "Total Cases", "type": "quantitative"}
+          ]
+        }
       }
-    }
-  ],
-  "config": {}
+    ]    
 }
